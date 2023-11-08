@@ -1,5 +1,4 @@
 // Problem --> 01
-
 const calculateValue = (value: number | string): number | string => {
   if (typeof value === "string") {
     return value.length;
@@ -10,15 +9,12 @@ const calculateValue = (value: number | string): number | string => {
   }
 };
 const ifString = calculateValue("Nizam Uddin");
-const ifNumber = calculateValue(11);
+const ifNumber = calculateValue(7);
 
 // console.log(ifString);
 // console.log(ifNumber);
 
-// -----------------------------End---------------------------//
-
 // Problem --> 02
-
 type Address = {
   city: string;
   street: string;
@@ -42,10 +38,8 @@ const person1: Person = {
 const result = getAddressCity(person1);
 
 // console.log(result);
-// -----------------------------End---------------------------//
 
 // Problem --> 03
-
 class Cat {}
 const isCat = (animal: any): animal is Cat => {
   return animal instanceof Cat;
@@ -55,14 +49,12 @@ const cat1 = new Cat();
 const cat2 = { name: "Cat" };
 
 if (isCat(cat1)) {
-  //   console.log("yes, it's a cat.");
+  // console.log("yes, it's a cat.");
 } else {
-  //   console.log("no, it's not a cat.");
+  // console.log("no, it's not a cat.");
 }
-// -----------------------------End---------------------------//
 
 // Problem --> 04
-
 const sumAllNumInMixesData = (mixedData: (string | number)[]): number => {
   let sum = 0;
 
@@ -77,10 +69,8 @@ const sumAllNumInMixesData = (mixedData: (string | number)[]): number => {
 const mixedData: (number | string)[] = [1, "two", 3, "four", 5, 6];
 const result1 = sumAllNumInMixesData(mixedData);
 // console.log(result1);
-// -----------------------------End---------------------------//
 
 // Problem --> 05
-
 interface Car {
   make: string;
   model: string;
@@ -122,10 +112,8 @@ const driverInfo: Driver = {
 
 const result2 = combinedPropertiesWithCarAndDriver(carInfo, driverInfo);
 // console.log(result2);
-// -----------------------------End---------------------------//
 
 // Problem --> 06
-
 const arrayOfNumbers = (array: unknown): array is number[] => {
   return (
     Array.isArray(array) && array.every((value) => typeof value === "number")
@@ -144,10 +132,8 @@ const result3: unknown = [1, 2, 3, 4, 5, 6];
 const result4: unknown = ["1", 2, 3, 4, 5, "6"];
 
 calculateTheSum(result3);
-// -----------------------------End---------------------------//
 
 // Problem --> 07
-
 const findFirstOccurrence = <T>(array: T[], value: T): number => {
   for (let i = 0; i < array.length; i++) {
     if (array[i] === value) {
@@ -168,10 +154,8 @@ const indexInStrings = findFirstOccurrence(strings, targetString);
 
 // console.log(indexInNumbers);
 // console.log(indexInStrings);
-// -----------------------------End---------------------------//
 
 // Problem --> 08
-
 interface Product {
   name: string;
   price: number;
@@ -194,5 +178,3 @@ const shopping: Product[] = [
 
 const result5 = calculatesTotalCost(shopping);
 // console.log(result5);
-
-// -----------------------------End---------------------------//
