@@ -18,11 +18,24 @@
 
 ## Question - 05: Explain the role of type guards in TypeScript and provide an example of a custom type guard.
 
-### Ans:
+### Ans: Type guards are a valuable feature in TypeScript that allows developers to write more type-safe code by narrowing down the type of a variable or expression within a conditional block at runtime. By using type guards, TypeScript can detect and prevent runtime errors that may occur due to incorrect types.
 
 ## Question - 06: Can you give an example of how to use "readonly" properties in TypeScript?
 
-### Ans: Type guards are a valuable feature in TypeScript that allows developers to write more type-safe code by narrowing down the type of a variable or expression within a conditional block at runtime. By using type guards, TypeScript can detect and prevent runtime errors that may occur due to incorrect types.
+### Ans:
+
+type MyReadonly<T> = {
+readonly [K in keyof T]: T[K];
+};
+interface TodoRead {
+title: string;
+description: string;
+}
+
+const todoRead: MyReadonly<TodoRead> = {
+title: 'Hey',
+description: 'foobar',
+};
 
 ## Question - 07: Explain what a union type is in TypeScript and provide an example of its usage
 
